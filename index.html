@@ -78,7 +78,7 @@
     animation:fadeIn 800ms ease-out 400ms forwards;
   }
 
-  /* Title — modern bold sans */
+  /* Title — modern bold sans, three-line stack */
   .title{
     font-family:'Archivo Black','Manrope',sans-serif;
     font-weight:900;
@@ -88,19 +88,20 @@
     color:var(--ivory);
     margin-top:14px;
     text-transform:uppercase;
+    text-align:center;
     opacity:0;
     transform:translateY(10px);
     animation:rise 1000ms cubic-bezier(.2,.7,.2,1) 2800ms forwards;
   }
+  .title > span{display:block;line-height:0.94}
   .title .on{
     font-family:'Manrope',sans-serif;
     font-weight:500;
-    font-size:60px;
+    font-size:56px;
     color:var(--ivory-dim);
     text-transform:lowercase;
     letter-spacing:-2px;
-    vertical-align:middle;
-    margin:0 10px;
+    margin:6px 0;
   }
   .title .bang{color:var(--red)}
   .title .n21{
@@ -690,7 +691,11 @@
   <div class="eyebrow">Elliot&nbsp;&nbsp;Turns&nbsp;&nbsp;Twenty&#8209;One</div>
   <div class="mark">&#9670;</div>
 
-  <h1 class="title"><span>All&#8209;In</span> <span class="on">on</span> <span class="n21">21</span><span class="bang">!</span></h1>
+  <h1 class="title">
+    <span>All&#8209;In</span>
+    <span class="on">on</span>
+    <span><span class="n21">21</span><span class="bang">!</span></span>
+  </h1>
 
   <div class="composition">
     <div class="portrait"></div>
