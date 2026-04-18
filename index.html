@@ -262,19 +262,22 @@
   .face.front .corner{
     position:absolute;
     display:flex;flex-direction:column;align-items:center;
-    line-height:0.9;
-    z-index:2;
+    line-height:0.85;
+    z-index:5;
+    /* soft ivory halo so the rank sits clearly in front of the crest */
+    filter: drop-shadow(0 0 5px rgba(251,246,228,0.95))
+            drop-shadow(0 0 2px rgba(251,246,228,1));
   }
-  .face.front .corner.tl{top:16px;left:20px;text-align:left}
-  .face.front .corner.br{bottom:16px;right:20px;transform:rotate(180deg)}
+  .face.front .corner.tl{top:14px;left:16px;text-align:left}
+  .face.front .corner.br{bottom:14px;right:16px;transform:rotate(180deg)}
   .face.front .rank{
     font-family:'Manrope',sans-serif;
     font-weight:800;
-    font-size:60px;
-    letter-spacing:-3px;
-    line-height:0.9;
+    font-size:86px;
+    letter-spacing:-5px;
+    line-height:0.85;
   }
-  .face.front .suit-sm{font-size:32px;margin-top:-4px;line-height:0.9}
+  .face.front .suit-sm{font-size:42px;margin-top:-2px;line-height:0.9}
 
   /* Front-of-card centre — Walsh crest image */
   .front-crest{
@@ -480,22 +483,78 @@
   }
   .replay:hover{color:var(--gold);border-color:var(--gold)}
 
-  @media (max-width:700px){
-    .stage{padding:50px 28px 40px}
-    .title{font-size:80px;letter-spacing:-2px}
-    .title .on{font-size:40px}
-    .composition{height:620px;margin:40px auto 30px}
-    .portrait{width:440px;height:560px}
-    .card-wrap{width:180px;height:258px;bottom:30px}
-    .card-wrap.left{left:calc(50% - 200px)}
+  /* Tablet */
+  @media (max-width:900px){
+    .stage{padding:50px 40px 40px}
+    .title{font-size:108px;letter-spacing:-3px}
+    .title .n21{letter-spacing:-4px}
+    .composition{height:860px;margin:40px auto 30px}
+    .portrait{width:640px;height:600px}
+    .card-wrap{width:240px;height:344px;bottom:30px}
+    .card-wrap.left{left:calc(50% - 260px)}
     .card-wrap.right{left:calc(50% + 20px)}
-    .face.front .rank{font-size:36px}
-    .ace-spade{width:100px;height:120px}
-    .pips-10{font-size:28px;inset:40px 24px}
-    .date{font-size:22px}
-    .venue{font-size:22px;letter-spacing:3px}
-    .rsvp-btn{padding:16px 46px;letter-spacing:8px;font-size:14px}
-    .replay{right:20px;top:20px}
+    .face.front .rank{font-size:64px;letter-spacing:-3px}
+    .face.front .suit-sm{font-size:32px}
+    .date{font-size:28px}
+    .venue{font-size:28px;letter-spacing:3px}
+    .address{font-size:18px}
+    .offerings{font-size:20px}
+    .rsvp-note{font-size:20px}
+    .rsvp-note .deadline{font-size:19px}
+    .rsvp-btn{padding:20px 60px;letter-spacing:9px;font-size:16px}
+  }
+
+  /* Phone */
+  @media (max-width:640px){
+    .stage{padding:40px 20px 30px}
+    .stage::before{top:22px}
+    .stage::after{bottom:22px}
+    .eyebrow{font-size:11px;letter-spacing:8px;padding-left:6px}
+    .mark{font-size:10px;margin-top:10px}
+    .title{font-size:74px;letter-spacing:-2px;margin-top:8px}
+    .title .n21{letter-spacing:-3px}
+    .composition{height:660px;margin:26px auto 18px}
+    .portrait{width:90%;max-width:440px;height:420px;background-position:50% 30%;top:0}
+    .card-wrap{width:172px;height:246px;bottom:20px;filter: drop-shadow(0 18px 24px rgba(0,0,0,0.55))}
+    .card-wrap.left{left:calc(50% - 182px)}
+    .card-wrap.right{left:calc(50% + 10px)}
+    .face.front .rank{font-size:44px;letter-spacing:-2px}
+    .face.front .suit-sm{font-size:22px;margin-top:-2px}
+    .face.front .corner.tl{top:8px;left:10px}
+    .face.front .corner.br{bottom:8px;right:10px}
+    .back-crest{width:78%;height:78%}
+    .front-crest{width:72%;height:72%}
+    .hairline{width:200px;margin:16px auto 20px}
+    .date{font-size:19px;letter-spacing:1px}
+    .time{font-size:16px;margin-top:4px}
+    .venue{font-size:21px;letter-spacing:3px;margin-top:18px}
+    .address{font-size:15px;margin-top:6px}
+    .offerings{font-size:16px;margin-top:22px;padding:0 10px}
+    .offerings .sep{margin:0 8px;font-size:11px}
+    .dress{font-size:11px;letter-spacing:5px;margin-top:14px}
+    .dress .swatch{width:9px;height:9px;margin:0 6px 1px}
+    .rsvp-block{margin-top:28px}
+    .rsvp-note{font-size:17px;margin-bottom:20px;padding:0 6px}
+    .rsvp-note .deadline{font-size:16px;margin-top:6px;letter-spacing:0.5px}
+    .rsvp-btn{padding:16px 44px;letter-spacing:7px;font-size:14px}
+    .foot{margin-top:28px;font-size:10px;letter-spacing:4px}
+    .replay{right:16px;top:16px;font-size:9px;letter-spacing:3px;padding:6px 10px}
+  }
+
+  /* Very small phone — iPhone SE class */
+  @media (max-width:380px){
+    .title{font-size:60px}
+    .composition{height:600px}
+    .portrait{height:370px;width:96%}
+    .card-wrap{width:148px;height:212px}
+    .card-wrap.left{left:calc(50% - 158px)}
+    .card-wrap.right{left:calc(50% + 10px)}
+    .face.front .rank{font-size:38px}
+    .face.front .suit-sm{font-size:19px}
+    .venue{font-size:18px;letter-spacing:2px}
+    .date{font-size:16px}
+    .rsvp-note{font-size:16px}
+    .rsvp-btn{padding:14px 36px;letter-spacing:5px;font-size:13px}
   }
 </style>
 </head>
