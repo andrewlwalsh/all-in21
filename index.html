@@ -94,14 +94,16 @@
     animation:rise 1000ms cubic-bezier(.2,.7,.2,1) 2800ms forwards;
   }
   .title > span{display:block;line-height:0.94}
+  .title .row21{font-size:164px;line-height:0.9}
   .title .on{
     font-family:'Manrope',sans-serif;
     font-weight:500;
-    font-size:56px;
+    font-size:82px;
     color:var(--ivory-dim);
     text-transform:lowercase;
     letter-spacing:-2px;
-    margin:6px 0;
+    margin:8px 0 4px;
+    line-height:0.95;
   }
   .title .bang{color:var(--red)}
   .title .n21{
@@ -489,6 +491,8 @@
   @media (max-width:900px){
     .stage{padding:50px 40px 40px}
     .title{font-size:108px;letter-spacing:-3px}
+    .title .row21{font-size:130px}
+    .title .on{font-size:65px}
     .title .n21{letter-spacing:-4px}
     .composition{height:860px;margin:40px auto 30px}
     .portrait{width:640px;height:600px}
@@ -514,6 +518,8 @@
     .eyebrow{font-size:11px;letter-spacing:8px;padding-left:6px}
     .mark{font-size:10px;margin-top:10px}
     .title{font-size:74px;letter-spacing:-2px;margin-top:8px}
+    .title .row21{font-size:89px}
+    .title .on{font-size:45px}
     .title .n21{letter-spacing:-3px}
     .composition{height:660px;margin:26px auto 18px}
     .portrait{width:90%;max-width:440px;height:420px;background-position:50% 30%;top:0}
@@ -546,6 +552,8 @@
   /* Very small phone — iPhone SE class */
   @media (max-width:380px){
     .title{font-size:60px}
+    .title .row21{font-size:72px}
+    .title .on{font-size:36px}
     .composition{height:600px}
     .portrait{height:370px;width:96%}
     .card-wrap{width:148px;height:212px}
@@ -694,7 +702,7 @@
   <h1 class="title">
     <span>All&#8209;In</span>
     <span class="on">on</span>
-    <span><span class="n21">21</span><span class="bang">!</span></span>
+    <span class="row21"><span class="n21">21</span><span class="bang">!</span></span>
   </h1>
 
   <div class="composition">
