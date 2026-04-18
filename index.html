@@ -95,12 +95,12 @@
   .title .on{
     font-family:'Manrope',sans-serif;
     font-weight:500;
-    font-size:70px;
+    font-size:60px;
     color:var(--ivory-dim);
     text-transform:lowercase;
     letter-spacing:-2px;
     vertical-align:middle;
-    margin:0 12px;
+    margin:0 10px;
   }
   .title .bang{color:var(--red)}
   .title .n21{
@@ -379,10 +379,11 @@
     margin-top:26px;
     letter-spacing:1px;
     text-align:center;
+    line-height:1.5;
     opacity:0;
     animation:fadeIn 900ms ease-out 4300ms forwards;
   }
-  .offerings .sep{color:var(--red);margin:0 14px;font-size:14px;vertical-align:middle}
+  .offerings > div + div{margin-top:4px}
 
   .dress{
     font-family:'Manrope',sans-serif;
@@ -689,7 +690,7 @@
   <div class="eyebrow">Elliot&nbsp;&nbsp;Turns&nbsp;&nbsp;Twenty&#8209;One</div>
   <div class="mark">&#9670;</div>
 
-  <h1 class="title"><span>All&#8209;In</span> <span class="n21">21</span><span class="bang">!</span></h1>
+  <h1 class="title"><span>All&#8209;In</span> <span class="on">on</span> <span class="n21">21</span><span class="bang">!</span></h1>
 
   <div class="composition">
     <div class="portrait"></div>
@@ -742,7 +743,7 @@
   <div class="hairline"></div>
 
   <div class="details">
-    <div class="date">Saturday <span class="sep">&middot;</span> 29 August <span class="sep">&middot;</span> 2026</div>
+    <div class="date">Sat 29 Aug</div>
     <div class="time">from 6:30pm</div>
 
     <div class="venue">The Attic Bar</div>
@@ -750,28 +751,25 @@
   </div>
 
   <div class="offerings">
-    Nibbles <span style="color:var(--gold)">&amp;</span> drinks<span class="sep">&#9670;</span>Casino by Vegas Nights
+    <div>Nibbles <span style="color:var(--gold)">&amp;</span> drinks</div>
+    <div>Casino by Vegas Nights</div>
   </div>
 
   <div class="dress">
-    Dress
-    <span style="color:var(--ivory-dim);margin:0 8px">&mdash;</span>
-    <span class="swatch sw-red"></span>Red
+    Dress:
+    <span class="swatch sw-red" style="margin-left:10px"></span>Red
     <span style="color:var(--ivory-dim)">&amp;</span>
     Black<span class="swatch sw-black"></span>
-    <span style="color:var(--ivory-dim);margin:0 8px">&mdash;</span>
-    Smart Casual
   </div>
 
   <div class="rsvp-block">
     <div class="rsvp-note">
-      RSVP is <strong>essential</strong> to get in the door and collect your gaming allowance.
-      <span class="deadline">Please reply by <strong>Sunday 9 August</strong>.</span>
+      RSVP is <strong>essential</strong> to get in the door and receive your gaming allowance.
+      <span class="deadline">RSVP by <strong>Sun 9 Aug</strong></span>
     </div>
     <a class="rsvp-btn" href="https://forms.gle/wE36eyE3q5dfcJKy7">RSVP</a>
   </div>
 
-  <div class="foot">Vegas Nights <span style="margin:0 8px;color:var(--red)">&diams;</span> Sydney MMXXVI</div>
 </div>
 </body>
 </html>
