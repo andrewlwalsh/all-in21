@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- Prevent iOS/Safari from auto-linking addresses, phone numbers, dates -->
+<meta name="format-detection" content="telephone=no, address=no, date=no, email=no"/>
+<meta name="x-apple-disable-message-reformatting"/>
 <title>All-in on 21! — Elliot's 21st</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,12 +101,12 @@
   .title .on{
     font-family:'Manrope',sans-serif;
     font-weight:500;
-    font-size:82px;
+    font-size:41px;
     color:var(--ivory-dim);
     text-transform:lowercase;
-    letter-spacing:-2px;
-    margin:8px 0 4px;
-    line-height:0.95;
+    letter-spacing:-1px;
+    margin:4px 0 2px;
+    line-height:1;
   }
   .title .bang{color:var(--red)}
   .title .n21{
@@ -373,6 +376,12 @@
     margin-top:8px;
     letter-spacing:1px;
   }
+  /* kill any auto-detected address link styling */
+  .address a, .address a:visited{
+    color:inherit !important;
+    text-decoration:none !important;
+    pointer-events:none;
+  }
 
   .offerings{
     font-family:'Manrope',sans-serif;
@@ -492,7 +501,7 @@
     .stage{padding:50px 40px 40px}
     .title{font-size:108px;letter-spacing:-3px}
     .title .row21{font-size:130px}
-    .title .on{font-size:65px}
+    .title .on{font-size:33px}
     .title .n21{letter-spacing:-4px}
     .composition{height:860px;margin:40px auto 30px}
     .portrait{width:640px;height:600px}
@@ -519,7 +528,7 @@
     .mark{font-size:10px;margin-top:10px}
     .title{font-size:74px;letter-spacing:-2px;margin-top:8px}
     .title .row21{font-size:89px}
-    .title .on{font-size:45px}
+    .title .on{font-size:22px}
     .title .n21{letter-spacing:-3px}
     .composition{height:660px;margin:26px auto 18px}
     .portrait{width:90%;max-width:440px;height:420px;background-position:50% 30%;top:0}
@@ -553,7 +562,7 @@
   @media (max-width:380px){
     .title{font-size:60px}
     .title .row21{font-size:72px}
-    .title .on{font-size:36px}
+    .title .on{font-size:18px}
     .composition{height:600px}
     .portrait{height:370px;width:96%}
     .card-wrap{width:148px;height:212px}
